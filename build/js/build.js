@@ -19051,7 +19051,7 @@ _reactDom2.default.render(_react2.default.createElement(_RebornSc2.default, null
                                                                                                                            * Module dependencies
                                                                                                                            */
 
-},{"./components/RebornSc.jsx":160,"react":158,"react-dom":29}],160:[function(require,module,exports){
+},{"./components/RebornSc.jsx":162,"react":158,"react-dom":29}],160:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -19078,22 +19078,239 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * Module dependencies
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
+var MenuSelect = function (_React$Component) {
+	_inherits(MenuSelect, _React$Component);
+
+	function MenuSelect(props) {
+		_classCallCheck(this, MenuSelect);
+
+		return _possibleConstructorReturn(this, Object.getPrototypeOf(MenuSelect).call(this, props));
+	}
+
+	_createClass(MenuSelect, [{
+		key: 'onChange',
+		value: function onChange(ev) {
+			var select = { value: parseInt(ev.target.value) };
+			this.props.onSelectChange.call(null, select);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'select',
+				{ onChange: this.onChange.bind(this) },
+				this.props.opciones.map(function (item) {
+					return _react2.default.createElement(
+						'option',
+						{ key: item.id, value: item.id },
+						item.clase
+					);
+				})
+			);
+		}
+	}]);
+
+	return MenuSelect;
+}(_react2.default.Component);
+
+exports.default = MenuSelect;
+
+},{"react":158,"react-dom":29}],161:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var MenuSelectTwo = function (_React$Component) {
+	_inherits(MenuSelectTwo, _React$Component);
+
+	function MenuSelectTwo(props) {
+		_classCallCheck(this, MenuSelectTwo);
+
+		return _possibleConstructorReturn(this, Object.getPrototypeOf(MenuSelectTwo).call(this, props));
+	}
+
+	_createClass(MenuSelectTwo, [{
+		key: 'onChange',
+		value: function onChange(ev) {
+			var select = { id: this.props.value, value: parseInt(ev.target.value) };
+			this.props.onSelectChange.call(null, select);
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'select',
+				{ onChange: this.onChange.bind(this) },
+				this.props.opciones.map(function (item) {
+					return _react2.default.createElement(
+						'option',
+						{ key: item.id, value: item.id },
+						item.clase
+					);
+				})
+			);
+		}
+	}]);
+
+	return MenuSelectTwo;
+}(_react2.default.Component);
+
+exports.default = MenuSelectTwo;
+
+},{"react":158,"react-dom":29}],162:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _TableMenu = require('./TableMenu.jsx');
+
+var _TableMenu2 = _interopRequireDefault(_TableMenu);
+
+var _TableContent = require('./TableContent.jsx');
+
+var _TableContent2 = _interopRequireDefault(_TableContent);
+
+var _info = require('../stores/info.jsx');
+
+var _info2 = _interopRequireDefault(_info);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var gameData = _info2.default;
+
 var RebornSc = function (_React$Component) {
 	_inherits(RebornSc, _React$Component);
 
-	function RebornSc() {
+	function RebornSc(props) {
 		_classCallCheck(this, RebornSc);
 
-		return _possibleConstructorReturn(this, Object.getPrototypeOf(RebornSc).apply(this, arguments));
+		var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(RebornSc).call(this, props));
+
+		_this.state = { activeSkills: [], pasiveSkills: [], firstSelect: 0 };
+		_this.onSelectChangeFirst.bind(_this);
+		_this.onSelectChange.bind(_this);
+		return _this;
 	}
 
 	_createClass(RebornSc, [{
+		key: 'onSelectChangeFirst',
+		value: function onSelectChangeFirst(select) {
+			var newfirstSelect = select.value;
+			var skillsToAdd = gameData[newfirstSelect].skills;
+			var newSkills = Array();
+			//Mapeo para agregar skills
+			skillsToAdd.map(function (skill) {
+				skill.skillGet[0] = "active";
+				skill.selectId = 0;
+				newSkills.push(skill);
+			});
+			//Setteo final
+			this.setState({ firstSelect: newfirstSelect, activeSkills: newSkills });
+		}
+	}, {
+		key: 'onSelectChange',
+		value: function onSelectChange(select) {
+			var skillsToAdd = Array();
+			if (select.id == 1) {
+				skillsToAdd = gameData[this.state.firstSelect].subClass[select.value].skills;
+				var activeSkills = this.state.activeSkills;
+				console.log('Primer skillToAdd ', skillsToAdd);
+				console.log('Primer activeSkills ', activeSkills);
+				console.log('-------No coinciden ninguno de los dos-----------');
+				//Primer mapeo para eliminar los que no deben estar dentro
+				var y = activeSkills.length;
+				console.log('activeSkills.length: ' + activeSkills.length);
+				for (var i = 0; i < y; i++) {
+					if (activeSkills[i].selectId == 1) {
+						activeSkills.splice(i, 1);
+						i--;
+						y--; //Elimina la posibilidad de entrar a un activeSkills[i] invalido a causa de que hice un splice.
+						console.log('Haciendo el ' + i + ' splice()');
+					} else if (activeSkills[i].skillGet[1] == "active") {
+						console.log('Quitando active');
+						activeSkills[i].skillGet[1] = "";
+						//Debo ademas volverlo hacia atras. Queda pensar como hacer esto.
+					}
+				}
+				console.log(activeSkills);
+				//Agregando
+				var q = skillsToAdd.length;
+				var w = activeSkills.length;
+				for (var i = 0; i < q; i++) {
+					var needAdd = true;
+					for (var f = 0; f < w; f++) {
+						if (skillsToAdd[i].id == activeSkills[f].id) {
+							activeSkills[f].skillGet[1] = "active";
+							needAdd = false;
+							//Hago update de atributos. Supongo que sera mas facil que volverlo hacia atras.
+						}
+					}
+					if (needAdd) {
+						skillsToAdd[i].skillGet[1] = "active";
+						skillsToAdd[i].selectId = 1;
+						activeSkills.push(skillsToAdd[i]);
+					}
+				}
+				//Termino!
+				this.setState({ activeSkills: activeSkills });
+			}
+			//Aqui va para el resto de select.id
+		}
+	}, {
 		key: 'render',
 		value: function render() {
 			return _react2.default.createElement(
 				'div',
-				null,
-				'Testing...'
+				{ className: 'RebornSc', id: 'container' },
+				_react2.default.createElement(_TableMenu2.default, { onSelectChangeFirst: this.onSelectChangeFirst.bind(this), firstSelect: this.state.firstSelect, onSelectChange: this.onSelectChange.bind(this), opciones: gameData }),
+				_react2.default.createElement(
+					'div',
+					{ className: 'table' },
+					_react2.default.createElement(_TableContent2.default, { skills: this.state.activeSkills, name: 'active' }),
+					_react2.default.createElement(_TableContent2.default, { skills: this.state.pasiveSkills, name: 'pasive' })
+				)
 			);
 		}
 	}]);
@@ -19103,4 +19320,348 @@ var RebornSc = function (_React$Component) {
 
 exports.default = RebornSc;
 
-},{"react":158,"react-dom":29}]},{},[159]);
+},{"../stores/info.jsx":167,"./TableContent.jsx":164,"./TableMenu.jsx":166,"react":158,"react-dom":29}],163:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var styles = {
+	width: "70%"
+};
+var i = void 0;
+
+var Skill = function (_React$Component) {
+	_inherits(Skill, _React$Component);
+
+	function Skill() {
+		_classCallCheck(this, Skill);
+
+		return _possibleConstructorReturn(this, Object.getPrototypeOf(Skill).apply(this, arguments));
+	}
+
+	_createClass(Skill, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'skill' },
+				_react2.default.createElement(
+					'div',
+					{ className: 'skill-info' },
+					_react2.default.createElement(
+						'div',
+						{ className: 'skill-content' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'text' },
+							'7/10'
+						),
+						_react2.default.createElement('img', { src: 'img/accuracy_aura.jpg', className: 'skill-image' }),
+						_react2.default.createElement(
+							'div',
+							{ className: 'calls' },
+							_react2.default.createElement(
+								'a',
+								{ href: '#', className: 'skill-btn-sum' },
+								'+'
+							),
+							_react2.default.createElement(
+								'a',
+								{ href: '#', className: 'skill-btn-sub' },
+								'-'
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'progress' },
+							_react2.default.createElement('div', { style: styles })
+						)
+					),
+					_react2.default.createElement(
+						'div',
+						{ className: 'skill-get' },
+						(i = -1, this.props.skill.skillGet.map(function (skill) {
+							i++;
+							return _react2.default.createElement('div', { className: skill });
+						}))
+					)
+				),
+				_react2.default.createElement(
+					'div',
+					{ className: 'skill-name' },
+					this.props.skill.name
+				)
+			);
+		}
+	}]);
+
+	return Skill;
+}(_react2.default.Component);
+
+Skill.defaultProps = { skillGet: ["", "", "", "", "", ""] };
+
+exports.default = Skill;
+
+},{"react":158,"react-dom":29}],164:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _TableContentSkill = require('./TableContentSkill.jsx');
+
+var _TableContentSkill2 = _interopRequireDefault(_TableContentSkill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var TableContent = function (_React$Component) {
+	_inherits(TableContent, _React$Component);
+
+	function TableContent() {
+		_classCallCheck(this, TableContent);
+
+		return _possibleConstructorReturn(this, Object.getPrototypeOf(TableContent).apply(this, arguments));
+	}
+
+	_createClass(TableContent, [{
+		key: 'render',
+		value: function render() {
+
+			var styleClass = void 0;
+			var titleText = void 0;
+
+			if (this.props.name == 'active') {
+				styleClass = 'table-skill';
+				titleText = 'Active';
+			} else {
+				styleClass = 'table-skill-pasive';
+				titleText = 'Pasive';
+			}
+
+			return _react2.default.createElement(
+				'div',
+				{ className: styleClass },
+				_react2.default.createElement(
+					'div',
+					{ className: 'title' },
+					titleText
+				),
+				_react2.default.createElement(_TableContentSkill2.default, { skills: this.props.skills, name: titleText })
+			);
+		}
+	}]);
+
+	return TableContent;
+}(_react2.default.Component);
+
+exports.default = TableContent;
+
+},{"./TableContentSkill.jsx":165,"react":158,"react-dom":29}],165:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Skill = require('./Skill.jsx');
+
+var _Skill2 = _interopRequireDefault(_Skill);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var TableContentSkill = function (_React$Component) {
+	_inherits(TableContentSkill, _React$Component);
+
+	function TableContentSkill() {
+		_classCallCheck(this, TableContentSkill);
+
+		return _possibleConstructorReturn(this, Object.getPrototypeOf(TableContentSkill).apply(this, arguments));
+	}
+
+	_createClass(TableContentSkill, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'div',
+				{ className: 'content', id: "skill-" + this.props.name },
+
+				//console.log(this.props.skills),
+				this.props.skills.map(function (skill) {
+					return _react2.default.createElement(_Skill2.default, { skill: skill });
+				})
+			);
+		}
+	}]);
+
+	return TableContentSkill;
+}(_react2.default.Component);
+
+exports.default = TableContentSkill;
+
+},{"./Skill.jsx":163,"react":158,"react-dom":29}],166:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _MenuSelect = require('./MenuSelect.jsx');
+
+var _MenuSelect2 = _interopRequireDefault(_MenuSelect);
+
+var _MenuSelectTwo = require('./MenuSelectTwo.jsx');
+
+var _MenuSelectTwo2 = _interopRequireDefault(_MenuSelectTwo);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /*
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Module dependencies
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+var id = void 0;
+
+var TableMenu = function (_React$Component) {
+	_inherits(TableMenu, _React$Component);
+
+	function TableMenu(props) {
+		_classCallCheck(this, TableMenu);
+
+		var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(TableMenu).call(this, props));
+
+		_this.state = {};
+		return _this;
+	}
+
+	_createClass(TableMenu, [{
+		key: 'render',
+		value: function render() {
+
+			return _react2.default.createElement(
+				'div',
+				{ className: 'tableMenu' },
+				_react2.default.createElement(_MenuSelect2.default, { onSelectChange: this.props.onSelectChangeFirst, opciones: this.props.opciones }),
+				_react2.default.createElement(_MenuSelectTwo2.default, { value: 1, onSelectChange: this.props.onSelectChange, opciones: this.props.opciones[this.props.firstSelect].subClass }),
+				_react2.default.createElement(_MenuSelectTwo2.default, { value: 2, onSelectChange: this.props.onSelectChange, opciones: this.props.opciones[this.props.firstSelect].subClassTwo }),
+				_react2.default.createElement(_MenuSelectTwo2.default, { value: 3, onSelectChange: this.props.onSelectChange, opciones: this.props.opciones[this.props.firstSelect].subClassThree }),
+				_react2.default.createElement(_MenuSelectTwo2.default, { value: 4, onSelectChange: this.props.onSelectChange, opciones: this.props.opciones[this.props.firstSelect].subClassFour }),
+				_react2.default.createElement(_MenuSelectTwo2.default, { value: 5, onSelectChange: this.props.onSelectChange, opciones: this.props.opciones[this.props.firstSelect].subClassFive })
+			);
+		}
+	}]);
+
+	return TableMenu;
+}(_react2.default.Component);
+
+exports.default = TableMenu;
+
+},{"./MenuSelect.jsx":160,"./MenuSelectTwo.jsx":161,"react":158,"react-dom":29}],167:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = [{ id: 0, clase: "Clase", skills: [], subClass: [{ id: 0, clase: "Clase 2", skills: [] }], subClassTwo: [{ id: 0, clase: "Clase 3", skills: [] }], subClassThree: [{ id: 0, clase: "Clase 4", skills: [] }], subClassFour: [{ id: 0, clase: "Clase 5", skills: [] }], subClassFive: [{ id: 0, clase: "Clase 6", skills: [] }] }, { id: 1, clase: "Guerrero",
+	skills: [{ id: 10000, level: 5, name: "Accuracy_Aura0", skillGet: ["", "", "", "", "", ""] }, { id: 10001, level: 5, name: "Attack_Aura1", skillGet: ["", "", "", "", "", ""] }],
+	subClass: [{ id: 0, clase: "Clase 2", skills: [{ id: 10002, level: 5, name: "Accuracy_Aura2", skillGet: ["", "", "", "", "", ""] }, { id: 10004, level: 5, name: "Attack_Aura4", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Guard", skills: [{ id: 10003, level: 5, name: "Accuracy_Aura3", skillGet: ["", "", "", "", "", ""] }, { id: 10005, level: 5, name: "Attack_Aura5", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Warrior", skills: [{ id: 10001, level: 5, name: "Accuracy_Aura1", skillGet: ["", "", "", "", "", ""] }, { id: 10006, level: 5, name: "Attack_Aura6", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassTwo: [{ id: 0, clase: "Clase 3", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Infantryman", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Swordman", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Mercenary", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassThree: [{ id: 0, clase: "Clase 4", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Phalanx", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Knight", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Gladiator", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 4, clase: "Rune Knight", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFour: [{ id: 0, clase: "Clase 5", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Paladin", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Panzer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Crusader", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 4, clase: "Destroyer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 5, clase: "Sword Master", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 6, clase: "Magnus", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFive: [{ id: 0, clase: "Clase 6", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Lord", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Death Knight", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "ArchTemplar", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }]
+}, { id: 2, clase: "Picaro",
+	skills: [{ name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }],
+	subClass: [{ id: 0, clase: "Clase 2", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Voyager", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Ruffian", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassTwo: [{ id: 0, clase: "Clase 3", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Archer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Thief", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Scout", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassThree: [{ id: 0, clase: "Clase 4", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Ranger", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Treasure Hunter", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Assassin", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 4, clase: "RuneWalker", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFour: [{ id: 0, clase: "Clase 5", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Sniper", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Entrapper", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "BladeTaker", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 4, clase: "Templar Master", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 5, clase: "Arch Ranger", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFive: [{ id: 0, clase: "Clase 6", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Soul Eye", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Blade Stalker", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Arch Breezer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }]
+}, { id: 3, clase: "Mage",
+	skills: [{ name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }],
+	subClass: [{ id: 0, clase: "Clase 2", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Cleric", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Wizard", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassTwo: [{ id: 0, clase: "Clase 3", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Priest", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Sorcerer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Monk", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassThree: [{ id: 0, clase: "Clase 4", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Bishop", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Warlock", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Inquirer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 4, clase: "Elemental Master", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFour: [{ id: 0, clase: "Clase 5", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Cardinal", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Soul Arbiter", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Grand Master", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 4, clase: "Necromancer", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 5, clase: "Rune Master", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFive: [{ id: 0, clase: "Clase 6", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Saint", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 2, clase: "Dark Archon", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 3, clase: "Arch Celebrant", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }]
+}, { id: 4, clase: "Majin",
+	skills: [{ name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }],
+	subClass: [{ id: 0, clase: "Clase 2", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Len eopeu", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassTwo: [{ id: 0, clase: "Clase 3", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Combatant", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassThree: [{ id: 0, clase: "Clase 4", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Expert", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFour: [{ id: 0, clase: "Clase 5", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Master", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }],
+	subClassFive: [{ id: 0, clase: "Clase 6", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }, { id: 1, clase: "Expand Road", skills: [{ id: 10000, level: 5, name: "Accuracy_Aura", skillGet: ["", "", "", "", "", ""] }, { id: 10000, level: 5, name: "Attack_Aura", skillGet: ["", "", "", "", "", ""] }] }]
+}];
+
+},{}]},{},[159]);

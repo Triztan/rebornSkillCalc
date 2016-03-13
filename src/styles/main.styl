@@ -53,114 +53,117 @@ body
 		justify-content space-between
 		overflow auto
 		
-		.pasive
-			width 33.33%
 
+		&-skill-pasive
+			height 100%
+			width 33.33%
+			max-height 600px
 		&-skill
 			height 100%
 			width 66.67%
 			max-height 600px
 			
-			.title
-				height 30px
-				line-height 30px
-				text-align center
-				border-bottom 3px solid $grey
-				border-left 1px solid $grey
-				border-right 1px solid $grey
-				background: $celeste; /* For browsers that do not support gradients */
-				background: -webkit-linear-gradient($celeste, $grey); /* For Safari 5.1 to 6.0 */
-				background: -o-linear-gradient($celeste, $grey); /* For Opera 11.1 to 12.0 */
-				background: -moz-linear-gradient($celeste, $grey); /* For Firefox 3.6 to 15 */
-				background: linear-gradient($celeste, $grey); /* Standard syntax */
-				
-			.content
-				width 100%
-				height 560px
-				max-height 560px
+
+.title
+	height 30px
+	line-height 30px
+	text-align center
+	border-bottom 3px solid $grey
+	border-left 1px solid $grey
+	border-right 1px solid $grey
+	background: $celeste; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient($celeste, $grey); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient($celeste, $grey); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($celeste, $grey); /* For Firefox 3.6 to 15 */
+	background: linear-gradient($celeste, $grey); /* Standard syntax */
+	
+.content
+	width 100%
+	height 560px
+	max-height 560px
+	display flex
+	flex-wrap wrap
+	align-content flex-start
+		
+	.skill
+		&-name
+			font-size 12px
+			text-align center
+		&-info
+			height $skillH
+			width 70px
+			display flex
+			flex-direction row
+			align-items center
+			margin 2px 7px
+			justify-content center
+			background-color black
+			border-radius 10px 0 0 6px
+			padding-right 2px
+			
+			.skill-get
+				width 7px
+				height $skillH
 				display flex
-				flex-wrap wrap
-				align-content flex-start
+				flex-direction column
+				align-items center
+				justify-content space-around
+				div
+					height 10px
+					width 5px
+					background-color white
+				div.active
+					background-color green
+				
+			.skill-content
+				width 60px
+				height 98px
+				padding 4px 0px 4px 4px
+				.progress
+					width 100%
+					height 6px
+					border 1px solid black
+					border-radius 3px
+					div
+						height 6px
+						background-color green
+						border-radius 3px 0 0 3px
+				.text
+					font-size 14px
+					text-align center
+					color white
+				.skill-image
+					display flex
+					width 60px
+					height 58px
+					order 1
+					border-radius 10px 0px 0px 0px
+				
+				.calls
+					text-align center
+					display flex
+					flex-direction row
+					justify-content space-between
+					order 2
 					
-				.skill
-					&-name
-						font-size 12px
-						text-align center
-					&-info
-						height $skillH
-						width 70px
-						display flex
-						flex-direction row
-						align-items center
-						margin 2px 7px
-						justify-content center
-						background-color black
-						border-radius 10px 0 0 6px
-						padding-right 2px
-						
-						.skill-get
-							width 7px
-							height $skillH
-							display flex
-							flex-direction column
-							align-items center
-							justify-content space-around
-							div
-								height 10px
-								width 5px
-								background-color white
-							div.active
-								background-color green
-							
-						.skill-content
-							width 60px
-							height 98px
-							padding 4px 0px 4px 4px
-							.progress
-								width 100%
-								height 6px
-								border 1px solid black
-								border-radius 3px
-								div
-									height 6px
-									background-color green
-									border-radius 3px 0 0 3px
-							.text
-								font-size 14px
-								text-align center
-								color white
-							.skill-image
-								display flex
-								width 60px
-								height 58px
-								order 1
-								border-radius 10px 0px 0px 0px
-							
-							.calls
-								text-align center
-								display flex
-								flex-direction row
-								justify-content space-between
-								order 2
-								
-								
-								.skill-btn-sum
-									border 1px solid blue
-									color white
-									background-color blue
-									border-radius 5px
-									font-size 16px
-									line-height 16px
-									height 16px
-									width 50%
-									text-decoration none
-								.skill-btn-sub
-									border 1px solid red
-									color white
-									background-color red
-									border-radius 5px
-									font-size 16px
-									line-height 16px
-									height 16px
-									width 50%
-									text-decoration none
+					
+					.skill-btn-sum
+						border 1px solid blue
+						color white
+						background-color blue
+						border-radius 5px
+						font-size 16px
+						line-height 16px
+						height 16px
+						width 50%
+						text-decoration none
+					.skill-btn-sub
+						border 1px solid red
+						color white
+						background-color red
+						border-radius 5px
+						font-size 16px
+						line-height 16px
+						height 16px
+						width 50%
+						text-decoration none
