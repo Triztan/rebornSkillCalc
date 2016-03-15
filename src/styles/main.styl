@@ -1,22 +1,71 @@
-@import 'normalize.css'
-@import 'reset.styl'
+//@import 'normalize.css'
+//@import 'reset.styl'
+@import 'bootstrap.css'
+
+$grey1 = #8D8D8D
+$grey2 = #E9E9E9
+
+$optBackground = #ADADAD
 
 $grey = #8D8D8D
-$celeste = #7996E8
+$celeste = #DEDEDE
 
-$skillH = 106px
+$skillH = 60px
 $skillW = 84px
 body
 	font-size 16px
+	background-color #C8D6E1
+	background-image url('http://rebornluna2.com/landing/img/intro-bg.jpg')
 
+#container
+	height 100%
+
+ul
+	list-style none
+.ulToShow
+	overflow auto
+	font-size 12px
+	text-align center
 
 .RebornSc
 	margin 0 auto
 	width $skillW*11
-	height 600px
-	border 4px solid $grey
+	min-height 600px
+	border 2px solid $grey
 	border-radius 10px
+	background-color #C8D6E1
+	background-image url('../img/skybackground.jpg')
+	background-repeat repeat-x
+	background-size 100% 100%
 	
+	.xtraInfo
+		height 30px
+		width 100%
+		
+		font-size 16px
+		color white
+		background: $celeste; /* For browsers that do not support gradients */
+		background: -webkit-radial-gradient($celeste, $grey); /* Safari 5.1 to 6.0 */
+		background: -o-radial-gradient($celeste, $grey); /* For Opera 11.6 to 12.0 */
+		background: -moz-radial-gradient($celeste, $grey); /* For Firefox 3.6 to 15 */
+		background: radial-gradient($celeste, $grey); /* Standard syntax */
+		border 1px solid $grey
+		line-height 16px
+		text-align center
+		display flex;
+		align-items center
+		justify-content center
+		ul
+			list-style none
+			margin 0
+			padding 0
+			display flex
+			justify-content space-between
+			align-content space-around
+			min-width 760px
+			li
+				display inline
+
 	.tableMenu
 		//Centra el contenido margin 0 auto
 		//margin 0 auto
@@ -43,25 +92,22 @@ body
 			-webkit-appearance none
 			text-align center
 			option
-				background: $celeste;
+				background: $optBackground;
 	.table
 		width $skillW*11
-		height 560px
+		height 100%
 		border-top 4px solid $grey
 		display flex
 		flex-direction row
 		justify-content space-between
-		overflow auto
 		
 
 		&-skill-pasive
 			height 100%
 			width 33.33%
-			max-height 600px
 		&-skill
 			height 100%
 			width 66.67%
-			max-height 600px
 			
 
 .title
@@ -79,19 +125,25 @@ body
 	
 .content
 	width 100%
-	height 560px
-	max-height 560px
+	height 100%
 	display flex
 	flex-wrap wrap
 	align-content flex-start
 		
 	.skill
+		margin-left 20px
+		margin-right 20px
+		margin-bottom 15px
+		margin-top 15px
 		&-name
-			font-size 12px
+			font-size 10px
 			text-align center
+			position absolute
+			word-wrap break-word
+			margin auto
 		&-info
 			height $skillH
-			width 70px
+			width 50px
 			display flex
 			flex-direction row
 			align-items center
@@ -109,11 +161,13 @@ body
 				align-items center
 				justify-content space-around
 				div
-					height 10px
+					height 8px
 					width 5px
+					border 1 solid black
 					background-color white
 				div.active
 					background-color green
+					border-radius 1px
 				
 			.skill-content
 				width 60px
@@ -129,15 +183,15 @@ body
 						background-color green
 						border-radius 3px 0 0 3px
 				.text
-					font-size 14px
+					font-size 12px
 					text-align center
-					color white
+					color black
 				.skill-image
 					display flex
-					width 60px
-					height 58px
+					width 40px
+					height 39px
 					order 1
-					border-radius 10px 0px 0px 0px
+					border-radius 10px 10px 10px 10px
 				
 				.calls
 					text-align center
@@ -157,6 +211,7 @@ body
 						height 16px
 						width 50%
 						text-decoration none
+						cursor pointer
 					.skill-btn-sub
 						border 1px solid red
 						color white
@@ -167,3 +222,4 @@ body
 						height 16px
 						width 50%
 						text-decoration none
+						cursor pointer

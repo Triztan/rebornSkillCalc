@@ -24,7 +24,7 @@ class TableContent extends React.Component {
 		return <div className={ styleClass }>
 
 			<div className="title">{ titleText }</div>
-			<TableContentSkill skills={this.props.skills} name={titleText} />
+			<TableContentSkill openModal={this.props.openModal} spManagerFunction={this.props.spManagerFunc} skills={this.props.skills} name={titleText} />
 
 		</div>
 		

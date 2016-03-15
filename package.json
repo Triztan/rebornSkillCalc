@@ -17,6 +17,7 @@
     "nib": "^1.1.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-modal": "^0.6.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
