@@ -54,7 +54,7 @@ class Skill extends React.Component {
 			<div className="skill-info">
 				<div className="skill-content">
 					<div className="text">{this.state.currentLevel}/{this.props.skill.level}</div>
-					<img onClick={this.handleClickImg.bind(this)} src="img/noimage.jpg" className="skill-image" />
+					<img onClick={this.handleClickImg.bind(this)} src="img/iconImages/noimage.jpg" className="skill-image" />
 					<div className="calls">
 						<div onClick={this.handleClickSum.bind(this)} className="skill-btn-sum">+</div>
 						<div onClick={this.handleClickSub.bind(this)} className="skill-btn-sub">-</div>

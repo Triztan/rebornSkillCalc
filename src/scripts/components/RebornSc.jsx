@@ -176,7 +176,7 @@ class RebornSc extends React.Component {
 				let w = activeSkills.length;
 				for (var i = 0; i < q; i++) {
 					let row = skillsToAdd[i].arrayId;
-					let colm = skillsToAdd[i].level;
+					let colm = skillsToAdd[i].level-1;
 					if (skillsData[row].infoByLvl[colm].objetive == "Pasive") {
 						let needAdd = true;
 						for (var f = 0; f < w; f++) {
@@ -201,7 +201,8 @@ class RebornSc extends React.Component {
 				let w = activeSkills.length;
 				for (var i = 0; i < q; i++) {
 					let row = skillsToAdd[i].arrayId;
-					let colm = skillsToAdd[i].level;
+					let colm = skillsToAdd[i].level-1;
+					console.log(skillsData[row].infoByLvl[skillsToAdd[i].level-1]);
 					if (skillsData[row].infoByLvl[colm].objetive != "Pasive") {
 						let needAdd = true;
 						for (var f = 0; f < w; f++) {
@@ -300,14 +301,12 @@ class RebornSc extends React.Component {
 		          isOpen={this.state.modalIsOpen}
 		          onRequestClose={this.closeModal.bind(this)}
 		          style={customStyles} >
-		 
-		          <h2>Skill life</h2>
-		          <div>description</div>
+		          <div>Descripcion</div>
 		          <table className="ulToShow">
 		          	<tr>
 		          		<th>Lvl </th>
 						<th>Nombre </th>
-						<th>ConsumoSP</th>
+						<th>ConsumoSP </th>
 						<th>Power </th>
 						<th>Cooldown </th>
 						<th>Req lvl </th>
@@ -317,10 +316,10 @@ class RebornSc extends React.Component {
 		          		return <tr>
 							<td>{skill.lvl} </td>
 							<td>{skill.name} </td>
-							<td>{skill.spConsumption}</td>
-							<td>{skill.power}</td>
-							<td>{skill.Cooldown}</td>
-							<td>{skill.LvRequirement}</td>
+							<td>{skill.spConsumption} </td>
+							<td>{skill.power} </td>
+							<td>{skill.Cooldown} </td>
+							<td>{skill.LvRequirement} </td>
 						</tr>
 		          	})
 		          }
