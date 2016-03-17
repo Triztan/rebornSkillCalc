@@ -21502,6 +21502,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */
 
 var i = void 0;
+var src = void 0;
+var icon = void 0;
 
 var Skill = function (_React$Component) {
 	_inherits(Skill, _React$Component);
@@ -21553,6 +21555,8 @@ var Skill = function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
+			icon = this.props.skill.icon;
+			src = 'img/iconImages/' + icon + '.png';
 			return _react2.default.createElement(
 				'div',
 				{ className: 'skill' },
@@ -21569,7 +21573,7 @@ var Skill = function (_React$Component) {
 							'/',
 							this.props.skill.level
 						),
-						_react2.default.createElement('img', { onClick: this.handleClickImg.bind(this), src: 'img/iconImages/noimage.jpg', className: 'skill-image' }),
+						_react2.default.createElement('img', { onClick: this.handleClickImg.bind(this), src: src, className: 'skill-image' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'calls' },

@@ -7,7 +7,8 @@ import ReactDOM from 'react-dom';
 
 
 let i;
-
+let src;
+let icon;
 class Skill extends React.Component {
 	constructor(props){
 		super(props);
@@ -50,11 +51,13 @@ class Skill extends React.Component {
 	}
 
 	render(){
+		icon = this.props.skill.icon;
+		src = `img/iconImages/${icon}.png`;
 		return <div className="skill">
 			<div className="skill-info">
 				<div className="skill-content">
 					<div className="text">{this.state.currentLevel}/{this.props.skill.level}</div>
-					<img onClick={this.handleClickImg.bind(this)} src="img/iconImages/noimage.jpg" className="skill-image" />
+					<img onClick={this.handleClickImg.bind(this)} src={src} className="skill-image" />
 					<div className="calls">
 						<div onClick={this.handleClickSum.bind(this)} className="skill-btn-sum">+</div>
 						<div onClick={this.handleClickSub.bind(this)} className="skill-btn-sub">-</div>
